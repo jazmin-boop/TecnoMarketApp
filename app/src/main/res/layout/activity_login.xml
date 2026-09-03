@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- FONDO DEGRADADO / ILUSTRACIÓN -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo"
+        android:contentDescription="Fondo" />
+
+    <!-- FILTRO OSCURO SUTIL PARA POTENCIAR EL CONTRASTE -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#26000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="36dp"
+            android:paddingBottom="36dp">
+
+            <!-- CONTENEDOR DEL LOGO (MÁS GRANDE CON HALO CRISTAL) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:cardCornerRadius="60dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#22FFFFFF"
+                app:strokeColor="#55FFFFFF"
+                app:strokeWidth="1.5dp"
+                android:layout_marginBottom="14dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tecnomarket_logo"
+                    android:scaleType="fitCenter"
+                    android:padding="14dp"
+                    android:contentDescription="Logo TecnoMarket" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- TÍTULO EN CONCORDANCIA CON EL LOGO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TECNO"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MARKET"
+                android:textColor="#00E5FF"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.14"
+                android:layout_marginTop="-6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Punto de Venta &amp; Gestión"
+                android:textColor="#C7D2FE"
+                android:textSize="12sp"
+                android:letterSpacing="0.06"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="28dp" />
+
+            <!-- TARJETA GLASSMORPHISM NÍTIDA -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="26dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#D90F172A"
+                app:strokeColor="#45FFFFFF"
+                app:strokeWidth="1.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="22dp"
+                    android:paddingVertical="28dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¡Bienvenido!"
+                        android:textColor="#FFFFFF"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inicia sesión en tu cuenta para acceder al sistema"
+                        android:textColor="#94A3B8"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="24dp" />
+
+                    <!-- CAMPO USUARIO -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxBackgroundColor="#1E293B"
+                        app:boxStrokeColor="#7C3AED"
+                        app:boxStrokeWidth="1.2dp"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:hintTextColor="#A78BFA"
+                        android:textColorHint="#64748B"
+                        app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                        app:startIconTint="#A78BFA"
+                        android:layout_marginBottom="16dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUsuario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Usuario"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:inputType="text"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- CAMPO CONTRASEÑA -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxBackgroundColor="#1E293B"
+                        app:boxStrokeColor="#7C3AED"
+                        app:boxStrokeWidth="1.2dp"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:hintTextColor="#A78BFA"
+                        android:textColorHint="#64748B"
+                        app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                        app:startIconTint="#A78BFA"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="#94A3B8"
+                        android:layout_marginBottom="26dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Contraseña"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:inputType="textPassword"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- BOTÓN INGRESAR -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnIngresar"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="Ingresar al Panel"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="16dp"
+                        app:backgroundTint="#7C3AED"
+                        app:elevation="4dp" />
+
+                    <!-- MENSAJE DE ERROR / ESTADO (AGREGA ESTO) -->
+                    <TextView
+                        android:id="@+id/tvMensaje"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#EF4444"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- FOOTER DISCRETO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TecnoMarket © 2026 • Sistema de Control"
+                android:textColor="#66FFFFFF"
+                android:textSize="11sp"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
